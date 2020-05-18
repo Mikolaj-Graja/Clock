@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: block;
+            position: relative;
+            background: rgb(10, 130, 211) url(meduza.jpg);
+            /* background-size: cover; */
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-size: cover;
+            background-blend-mode: soft-light;
+            background-position-y: -20vh;
+            height: 100vh;
+            text-align: center;
+
+        }
+
+        #clock {
+            display: block;
+            position: relative;
+            border: 6px solid white;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .arrow {
+            position: absolute;
+            height: 3px;
+            width: 100px;
+            background-color: black;
+            top: 50%;
+            left: 50%;
+            border-radius: 20%;
+            transform-origin: 0%;
+            transform: rotate(-90deg);
+            transition: 0.3s cubic-bezier(0.49, 0.45, 0.31, 2.24);
+        }
+
+        .hours {
+            transform: rotate(-90deg);
+            width: 65px;
+            height: 4px;
+        }
+
+        .minutes {
+            transform: rotate(-90deg);
+            width: 80px;
+            height: 3px;
+
+        }
+
+        .seconds {
+            transform: rotate(-90deg);
+            width: 90px;
+            height: 2px;
+            background-color: rgb(109, 6, 6);
+        }
+    </style>
+
+
+    <div id="clock">
+        <div class="arrow hours"></div>
+        <div class="arrow minutes"></div>
+        <div class="arrow seconds"></div>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+
+</html>
